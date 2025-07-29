@@ -1,0 +1,121 @@
+/* navbar.css */
+.navbar {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  padding: 20px 40px;
+  transition: background 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.logo-icon {
+  font-size: 22px;
+  color: orange;
+}
+
+.logo-text {
+  font-size: 18px;
+  color: white;
+}
+
+.logo-tagline {
+  font-size: 10px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 5px;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7f7f7;
+  color: orange;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.quote-btn {
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.quote-btn:hover {
+  background-color: darkorange;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
