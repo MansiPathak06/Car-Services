@@ -1,5 +1,5 @@
 import React from 'react';
-import './BrandsWeService.css';
+import './brandsWeService.css';
 
 const brands = [
   { name: "BMW", logo: "https://i.pinimg.com/736x/d3/59/a6/d359a669342e2d42de44db907193a837.jpg" },
