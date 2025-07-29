@@ -3,13 +3,13 @@ import './herosection.css';
 
 const slides = [
   {
-    image: 'public/banner1.jpg',
+    image: '/banner1.jpg',
     title: 'Best Original Parts & Product Change',
     description:
       'We represent considerable authority in canny and successful Search and has faith in the force of organizations to develop business.',
   },
   {
-    image: 'public/banner2.jpg',
+    image: '/banner2.jpg',
     title: 'Smooth Car Service for Every Vehicle',
     description:
       'Expert mechanics and professional care ensure your vehicle gets the treatment it deserves.',
