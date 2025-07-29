@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import './navbar.css';
+import React, { useEffect, useState } from "react";
+import "./navbar.css";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -10,8 +10,8 @@ const Navbar = () => {
       setScrolled(window.scrollY > 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="logo">
           <span className="logo-icon">⚙️</span>
@@ -27,34 +27,27 @@ const Navbar = () => {
           <span className="logo-tagline">EASY CARE & LIFE</span>
         </div>
 
-        <div className="hamburger" onClick={toggleMenu}>
+        <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
 
-        <nav className={`nav-links ${menuOpen ? 'show-menu' : ''}`}>
-          <a href="#">HOME</a>
-          <div className="dropdown">
-            <a href="#">PAGES ▾</a>
-            <div className="dropdown-content">
-              <a href="#">About</a>
-              <a href="#">Team</a>
-              <a href="#">FAQ</a>
-            </div>
-          </div>
-          <div className="dropdown">
-            <a href="#">SERVICES ▾</a>
-            <div className="dropdown-content">
-              <a href="#">Car Repair</a>
-              <a href="#">Oil Change</a>
-            </div>
-          </div>
+        <nav className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
+          <a href="/">HOME</a>
+
+          
+
+         
+            <a href="/services">SERVICES</a>
+            
+          
           <div className="dropdown">
             <a href="#">PRODUCTS ▾</a>
             <div className="dropdown-content">
-              <a href="#">Product 1</a>
-              <a href="#">Product 2</a>
+              <a href="#">Car Products</a>
+              <a href="#">Bike Products</a>
             </div>
           </div>
           <div className="dropdown">
@@ -63,7 +56,8 @@ const Navbar = () => {
               <a href="#">Latest Posts</a>
             </div>
           </div>
-          <a href="#">CONTACT</a>
+          <a href="#">GALLERY</a>
+          <a href="/contact">CONTACT</a>
         </nav>
 
         <button className="quote-btn">Free Quote</button>

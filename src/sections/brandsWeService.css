@@ -1,0 +1,86 @@
+.brands-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.brands-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brands-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.brands-heading .highlight {
+  color: orange;
+}
+
+.brands-subtext {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.brands-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.brand-card {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.icon-wrapper {
+  background-color: #ffeaea;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-icon {
+  color: orange;
+  font-size: 24px;
+}
+
+.brand-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.brand-logo-wrapper {
+  background-color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.brand-logo {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}

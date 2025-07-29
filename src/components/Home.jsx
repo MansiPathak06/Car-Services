@@ -10,6 +10,7 @@ import ProductSection from '../sections/ProductSection';
 import Footer from './Footer';
 import WorkProcess from '../sections/WorkProcess';
 import OurWorkers from '../sections/OurWorkers';
+import BrandsWeService from '../sections/BrandsWeService';
 
 const Home = () => {
   return (
@@ -21,11 +22,12 @@ const Home = () => {
       <ProductSection/>
       <WhatWeHaveDone/>
       <TestimonialSection/>
+      <BrandsWeService/>
       <WorkProcess/>
        <OurWorkers/>
       <BlogSection/>
      
-      <Footer/>
+      
       
     </div>
   );
