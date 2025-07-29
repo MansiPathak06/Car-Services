@@ -3,16 +3,20 @@ import './navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      setScrolled(offset > 100); // change threshold as needed
+      setScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
 
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
@@ -22,7 +26,14 @@ const Navbar = () => {
           <span className="logo-text">MOTORS</span>
           <span className="logo-tagline">EASY CARE & LIFE</span>
         </div>
-        <nav className="nav-links">
+
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+
+        <nav className={`nav-links ${menuOpen ? 'show-menu' : ''}`}>
           <a href="#">HOME</a>
           <div className="dropdown">
             <a href="#">PAGES ▾</a>
@@ -54,6 +65,7 @@ const Navbar = () => {
           </div>
           <a href="#">CONTACT</a>
         </nav>
+
         <button className="quote-btn">Free Quote</button>
       </div>
     </header>
