@@ -8,6 +8,8 @@ import TestimonialSection from '../sections/TestimonialSection';
 import BlogSection from '../sections/BlogSection';
 import ProductSection from '../sections/ProductSection';
 import Footer from './Footer';
+import WorkProcess from '../sections/WorkProcess';
+import OurWorkers from '../sections/OurWorkers';
 
 const Home = () => {
   return (
@@ -19,7 +21,10 @@ const Home = () => {
       <ProductSection/>
       <WhatWeHaveDone/>
       <TestimonialSection/>
+      <WorkProcess/>
+       <OurWorkers/>
       <BlogSection/>
+     
       <Footer/>
       
     </div>

@@ -4,6 +4,7 @@
   padding: 60px 20px;
   background: #fff;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .why-heading h2 {
@@ -135,7 +136,7 @@
    RESPONSIVE MEDIA QUERIES
 ──────────────────────────────── */
 
-/* Tablet (<=1024px) */
+/* Tablet (≤1024px) */
 @media (max-width: 1024px) {
   .why-heading h2 {
     font-size: 2.2rem;
@@ -159,7 +160,7 @@
   }
 }
 
-/* Mobile (<=768px) */
+/* Mobile (≤768px) */
 @media (max-width: 768px) {
   .why-heading h2 {
     font-size: 2rem;
@@ -198,7 +199,7 @@
   }
 }
 
-/* Small Mobile (<=480px) */
+/* Small Mobile (≤480px) */
 @media (max-width: 480px) {
   .why-heading h2 {
     font-size: 1.75rem;

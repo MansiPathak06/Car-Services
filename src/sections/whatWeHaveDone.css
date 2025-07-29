@@ -1,7 +1,7 @@
-/* WhatWeHaveDone.css */
+/* Base styles remain the same as before */
 
 .done-section {
-  padding: 60px 40px;
+  padding: 60px 20px;
   background-color: #fff;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
@@ -41,29 +41,32 @@
 .done-subtext {
   color: #777;
   font-size: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .done-layout {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px; /* changed from 60px to 30px */
+  gap: 70px;
   flex-wrap: wrap;
+  flex-direction: row;
 }
+
+.service-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  max-width: 250px;
+}
+
 .left {
   text-align: right;
 }
 
 .right {
   text-align: left;
-}
-.service-block {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  flex: 1;
-  max-width: 300px;
 }
 
 .done-item h4 {
@@ -78,65 +81,50 @@
 .done-item p {
   font-size: 14px;
   color: #555;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-
-  .icon {
+.icon {
   margin-left: 10px;
-  color: orange;
-  font-size: 25px;
+  color: gray;
+  font-size: 22px;
+}
 
+.done-center {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .done-center img {
   max-width: 240px;
   height: auto;
 }
-.done-center {
-   position: relative;
-  width: fit-content;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.done-item:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
-}
-
-
-.rotating-gear {
-   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 450px;  /* Adjust size as needed */
-  height: 450px;
-  transform: translate(-50%, -50%);
-  animation: spin 20s linear infinite;
-  z-index: 0; /* behind the car */
-}
-
-.rotating-gear img {
-  width: 100%;
-  height: 100%;
- 
-  opacity: 1; /* full visibility */
-}
 
 .gear-image {
-   width: 100%;
-  height: 100%;
-  
-  opacity: 0.5;
+  width: 100%;
+  height: 120%;
+  opacity: 1;
 }
 
 .car-image {
-   position: relative;
-  z-index: 1; /* above gear */
-  width: 900px;
+  position: relative;
+  z-index: 1;
+  width: 500px;
   height: auto;
+}
+
+.rotating-gear {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  animation: spin 20s linear infinite;
+  z-index: 0;
 }
 
 @keyframes spin {
@@ -148,3 +136,87 @@
   }
 }
 
+.done-item:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* -------------------- Responsive Styles -------------------- */
+
+@media (max-width: 1024px) {
+  .done-layout {
+    gap: 20px;
+  }
+
+  .service-block {
+    max-width: 220px;
+    gap: 25px;
+  }
+
+  .car-image {
+    width: 400px;
+  }
+
+  .rotating-gear {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .done-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .left,
+  .right {
+    text-align: center;
+  }
+
+  .car-image {
+    width: 80%;
+  }
+
+  .rotating-gear {
+    width: 220px;
+    height: 220px;
+  }
+
+  .done-subtext {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .done-title {
+    font-size: 28px;
+  }
+
+  .done-subtext {
+    font-size: 14px;
+  }
+
+  .done-item h4 {
+    font-size: 16px;
+  }
+
+  .done-item p {
+    font-size: 13px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .car-image {
+    width: 100%;
+  }
+
+  .rotating-gear {
+    width: 180px;
+    height: 180px;
+  }
+}

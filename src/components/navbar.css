@@ -1,11 +1,20 @@
-/* Keep your existing styles */
+/* === RESET SCROLL ZOOM ISSUE === */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* === BASE NAVBAR STYLES === */
 .navbar {
   background: transparent;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  font-family: Arial, sans-serif;
   padding: 10px 15px;
   transition: background 0.3s ease;
 }
@@ -15,6 +24,8 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -51,12 +62,14 @@
   font-weight: 600;
   position: relative;
   padding: 5px;
+  font-size: 14px;
 }
 
 .nav-links a:hover {
   color: orange;
 }
 
+/* === DROPDOWN === */
 .dropdown {
   position: relative;
 }
@@ -66,7 +79,7 @@
   top: 30px;
   left: 0;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
   min-width: 150px;
@@ -78,6 +91,7 @@
   color: #333;
   text-decoration: none;
   white-space: nowrap;
+  font-size: 14px;
 }
 
 .dropdown-content a:hover {
@@ -89,6 +103,7 @@
   display: flex;
 }
 
+/* === QUOTE BUTTON === */
 .quote-btn {
   background-color: orange;
   border: none;
@@ -97,13 +112,14 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 .quote-btn:hover {
   background-color: darkorange;
 }
 
-/* HAMBURGER MENU */
+/* === HAMBURGER MENU === */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -118,6 +134,7 @@
   transition: all 0.3s ease;
 }
 
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -147,12 +164,28 @@
     box-shadow: none;
   }
 
+  .dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #444;
+    color: orange;
+  }
+
   .quote-btn {
     display: none;
   }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
-/* Scroll Effect */
+/* === SCROLL EFFECT === */
 .navbar-scrolled {
   background-color: white !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
