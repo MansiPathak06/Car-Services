@@ -7,8 +7,8 @@ const SuccessExperience = () => {
       <div className="success-container">
         {/* LEFT: Overlapping Images */}
         <div className="success-images">
-          <img src="/image4.jpg" alt="Mechanic 1" className="img img-top" />
-          <img src="" alt="Mechanic 2" className="img img-bottom" />
+          <img src="https://i.pinimg.com/736x/13/e2/33/13e233b3faa0817556d35bab4e36b74c.jpg" alt="Mechanic 1" className="img img-top" />
+          <img src="https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg" alt="Mechanic 2" className="img img-bottom" />
         </div>
 
         {/* RIGHT: Text */}

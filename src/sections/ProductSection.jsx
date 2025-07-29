@@ -7,28 +7,28 @@ const products = [
     name: "Engine Oil",
     description: "High-performance synthetic oil for all engines.",
     price: "₹899",
-    image: "/assets/products/engine-oil.jpg",
+    image: "https://i.pinimg.com/1200x/70/66/e5/7066e5e273dac68838468fe04b54eaf5.jpg",
   },
   {
     id: 2,
     name: "Brake Pads",
     description: "Reliable, long-lasting brake pads.",
     price: "₹1,499",
-    image: "/assets/products/brake-pads.jpg",
+    image: "https://i.pinimg.com/1200x/be/d2/9d/bed29d329d9ee212b7ef72ba2c48fd8a.jpg",
   },
   {
     id: 3,
     name: "Car Battery",
     description: "High-capacity battery for all weather performance.",
     price: "₹4,250",
-    image: "/assets/products/car-battery.jpg",
+    image: "https://i.pinimg.com/1200x/8e/4f/56/8e4f569c851aa1345510c302dae77d7a.jpg",
   },
   {
     id: 4,
     name: "Air Filter",
     description: "Premium air filter for clean engine airflow.",
     price: "₹650",
-    image: "/assets/products/air-filter.jpg",
+    image: "https://i.pinimg.com/736x/05/13/40/051340d455a5b182014e5cc4fabf578a.jpg",
   },
 ];
 
