@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './heroSection.css';
+import './herosection.css';
 
 const slides = [
   {
