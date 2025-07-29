@@ -48,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 30px; /* changed from 60px to 30px */
   flex-wrap: wrap;
 }
 .left {
@@ -81,8 +81,12 @@
   margin-top: 8px;
 }
 
-.icon {
-  font-size: 24px;
+
+  .icon {
+  margin-left: 10px;
+  color: orange;
+  font-size: 25px;
+
 }
 
 .done-center img {

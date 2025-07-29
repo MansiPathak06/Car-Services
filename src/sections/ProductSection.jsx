@@ -12,7 +12,7 @@ const products = [
   {
     id: 2,
     name: "Brake Pads",
-    description: "Reliable, long-lasting brake pads.",
+    description: "Less wear, more safety — the upgrade your brakes deserve.",
     price: "₹1,499",
     image: "https://i.pinimg.com/1200x/be/d2/9d/bed29d329d9ee212b7ef72ba2c48fd8a.jpg",
   },
