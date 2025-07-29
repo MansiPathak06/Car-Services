@@ -6,7 +6,7 @@
   width: 100%;
   z-index: 1000;
   font-family: Arial, sans-serif;
-  padding: 20px 40px;
+  padding: 10px 15px;
   transition: background 0.3s ease;
 }
 
@@ -14,7 +14,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 40px;
+  padding: 2px;
+
 }
 
 .logo {
@@ -30,13 +31,16 @@
 }
 
 .logo-text {
-  font-size: 18px;
+ 
   color: white;
+   font-size: 16px;
 }
 
 .logo-tagline {
-  font-size: 10px;
+
   color: white;
+
+  font-size: 9px;
 }
 
 .nav-links {
@@ -118,4 +122,18 @@
     position: static;
     box-shadow: none;
   }
+}
+.navbar-scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled .logo-text,
+.navbar-scrolled .logo-tagline,
+.navbar-scrolled .nav-links a {
+  color: black;
+}
+
+.navbar-scrolled .logo-icon {
+  color: orange;
 }

@@ -7,21 +7,21 @@ const testimonials = [
     role: "Businessman",
     message:
       "Excellent service! My car was picked up and delivered on time, and it feels brand new.",
-    image: "/assets/testimonial1.jpg",
+    image: "https://i.pinimg.com/736x/eb/7c/4d/eb7c4da90b7f0e202ba6f83ef19e2c8b.jpg",
   },
   {
     name: "Priya Mehta",
     role: "IT Professional",
     message:
       "Loved the professionalism and the detailing work done. Highly recommend!",
-    image: "/assets/testimonial2.jpg",
+    image: "https://i.pinimg.com/1200x/5f/1d/a1/5f1da12036a8355ae279cff384090852.jpg",
   },
   {
     name: "Amit Verma",
     role: "Doctor",
     message:
       "Fast, reliable and trustworthy. My go-to car service from now on.",
-    image: "/assets/testimonial3.jpg",
+    image: "https://i.pinimg.com/736x/3d/63/67/3d63672e274e46bbb832e2c328a82217.jpg",
   },
 ];
 
