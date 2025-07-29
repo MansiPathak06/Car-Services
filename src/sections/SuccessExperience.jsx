@@ -3,37 +3,50 @@ import "./successExperience.css";
 
 const SuccessExperience = () => {
   return (
-    <section className="success-section">
-      <div className="success-container">
-        {/* LEFT: Overlapping Images */}
-        <div className="success-images">
-          <img src="https://i.pinimg.com/736x/13/e2/33/13e233b3faa0817556d35bab4e36b74c.jpg" alt="Mechanic 1" className="img img-top" />
-          <img src="https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg" alt="Mechanic 2" className="img img-bottom" />
+    <section className="service-section">
+      <div className="container">
+        {/* Image Section */}
+        <div className="image-section">
+          <div className="image-wrapper">
+            <img
+              src="https://i.pinimg.com/736x/ed/f3/d2/edf3d277a232e88916bfc2568b6aa4df.jpg"
+              alt="Professional Service"
+              className="main-image"
+            />
+            <img
+              src="https://i.pinimg.com/736x/13/e2/33/13e233b3faa0817556d35bab4e36b74c.jpg"
+              alt="Expert Team"
+              className="overlap-image"
+            />
+          </div>
         </div>
 
-        {/* RIGHT: Text */}
-        <div className="success-text">
-          <h2>Success Experiences</h2>
-          <div className="year-highlight">
-            <h1>1998</h1>
-            <p>
-              <span>20+ Years of experience</span>
-              <br />
-              in auto services.
-            </p>
+        {/* Content Section */}
+        <div className="content-section">
+          <h2 className="section-title">Our Services</h2>
+          
+          <div className="experience-badge">
+            <span className="year">1998</span>
+            <div className="experience-text">
+              <p>25+ Years</p>
+              <p>of Excellence</p>
+            </div>
           </div>
+
           <p className="description">
-            We are a group of expert and gifted specialists in every homegrown
-            circle. We offer a wide scope of administrations and simultaneously.
+            We deliver exceptional automotive services with a team of skilled 
+            professionals. Our commitment to quality and customer satisfaction 
+            sets us apart in the industry.
           </p>
 
-          <ul className="features-list">
-            <li>➤ Competitive prices</li>
-            <li>➤ Full safety analysis</li>
-            <li>➤ We are a qualified team</li>
+          <ul className="features">
+            <li>Expert Technicians</li>
+            <li>Quality Guarantee</li>
+            <li>Affordable Pricing</li>
+            <li>Fast Service</li>
           </ul>
 
-          <button className="read-more">Read More</button>
+          <button className="cta-button">Learn More</button>
         </div>
       </div>
     </section>

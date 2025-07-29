@@ -112,7 +112,7 @@
 .car-image {
   position: relative;
   z-index: 1;
-  width: 500px;
+  width: 200px;
   height: auto;
 }
 
@@ -122,7 +122,7 @@
   left: 50%;
   width: 300px;
   height: 300px;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -40%);
   animation: spin 20s linear infinite;
   z-index: 0;
 }
