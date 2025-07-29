@@ -8,7 +8,7 @@ const SuccessExperience = () => {
         {/* LEFT: Overlapping Images */}
         <div className="success-images">
           <img src="/image4.jpg" alt="Mechanic 1" className="img img-top" />
-          <img src="/image5.jpg" alt="Mechanic 2" className="img img-bottom" />
+          <img src="" alt="Mechanic 2" className="img img-bottom" />
         </div>
 
         {/* RIGHT: Text */}
