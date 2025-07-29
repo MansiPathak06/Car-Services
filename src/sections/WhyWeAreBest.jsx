@@ -37,11 +37,11 @@ const WhyWeAreBest = () => {
         </p>
       </div>
 
-      <div className="features">
+      <div className="features-m">
         {features.map((item) => (
           <div
             key={item.id}
-            className="feature-card"
+            className="feature-card-m"
             onMouseEnter={() => setHoveredId(item.id)}
             onMouseLeave={() => setHoveredId(null)}
           >
