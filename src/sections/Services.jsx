@@ -1,5 +1,7 @@
 import React from 'react';
 import './services.css';
+import { Link } from 'react-router-dom';
+
 
 const services = [
   {
@@ -60,8 +62,9 @@ const Services = () => {
             <img src={service.image} alt={service.title} className="service-image" />
             <div className="service-overlay">
               <h3 className="service-title">{service.title}</h3>
-              <p className="service-text">{service.description}</p>
-              <span className="read-more-s">Read More ➤</span>
+              <p className="service-text-s">{service.description}</p>
+              <Link to="/services" className="read-more-s">Read More ➤</Link>
+
               <span className="service-icon">{service.icon}</span>
             </div>
           </div>
