@@ -1,0 +1,147 @@
+/* gallery.css */
+.gallery-container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Hero Banner Same as Contact */
+.gallery-hero {
+  background-image: url('https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.gallery-hero-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.gallery-breadcrumb {
+  background-color: #f79c2e;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.gallery-buttons {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.gallery-button.active,
+.gallery-button:hover {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  height: 220px;
+  width: 300px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .gallery-hero-content h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 90%;
+  }
+
+  .gallery-hero {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-hero-content h2 {
+    font-size: 28px;
+  }
+}

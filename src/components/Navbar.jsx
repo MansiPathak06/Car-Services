@@ -52,7 +52,7 @@ const Navbar = () => {
               <a href="#">Latest Posts</a>
             </div> */}
           {/* </div> */}
-          <a href="#">GALLERY</a>
+          <a href="/gallery">GALLERY</a>
           <a href="/contact">CONTACT</a>
         </nav>
 
