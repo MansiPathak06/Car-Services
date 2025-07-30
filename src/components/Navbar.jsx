@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -56,7 +58,10 @@ const Navbar = () => {
           <a href="/contact">CONTACT</a>
         </nav>
 
-        <button className="quote-btn">Free Quote</button>
+       <Link to="/contact">
+  <button className="quote-btn">Free Quote</button>
+</Link>
+
       </div>
     </header>
   );

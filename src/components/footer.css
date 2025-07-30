@@ -58,6 +58,9 @@
   margin-right: 8px;
   color: #ffa500;
 }
+.icon-f{
+  font-size: 14px;
+}
 
 .social-icons {
   margin-top: 15px;
@@ -113,4 +116,9 @@
   .social-icons {
     justify-content: center;
   }
+}
+.footer-section.hours p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 6px;
 }
