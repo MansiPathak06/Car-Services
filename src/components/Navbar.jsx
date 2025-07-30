@@ -41,23 +41,17 @@ const Navbar = () => {
 
          
             <a href="/services">SERVICES</a>
+            <a href="/products">PRODUCTS</a>
+            <a href="/pricing">PRICING</a>
             
           
-          <div className="dropdown">
-            <a href="#">PRODUCTS ▾</a>
-            <div className="dropdown-content">
-              <a href="#">Car Products</a>
-              <a href="#">Bike Products</a>
-              <a href="/pricing">Pricing</a>
-              
-            </div>
-          </div>
-          <div className="dropdown">
-            <a href="#">BLOG ▾</a>
-            <div className="dropdown-content">
+          
+          {/* <div className="dropdown"> */}
+            <a href="#">BLOG </a>
+            {/* <div className="dropdown-content">
               <a href="#">Latest Posts</a>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
           <a href="#">GALLERY</a>
           <a href="/contact">CONTACT</a>
         </nav>
