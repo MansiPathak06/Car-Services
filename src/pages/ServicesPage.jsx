@@ -1,110 +1,143 @@
-// import React from "react";
-// import {
-//   FaWrench,
-//   FaTint,
-//   FaSnowflake,
-//   FaCompactDisc,
-//   FaStar,
-//   FaCog,
-//   FaClock,
-// } from "react-icons/fa";
-// import "./servicesPage.css";
+import React, { useState } from "react";
 
-// const services = [
-//   {
-//     icon: <FaWrench className="icon-red" />,
-//     title: "Engine Diagnostics",
-//     price: "₹1500",
-//     duration: "1-2 hours",
-//     description:
-//       "Comprehensive computer diagnostics to identify engine issues, performance problems, and emission concerns.",
-//   },
-//   {
-//     icon: <FaTint className="icon-red" />,
-//     title: "Oil Change",
-//     price: "₹700",
-//     duration: "30 minutes",
-//     description:
-//       "Premium oil change service using high-quality synthetic or conventional oil and genuine filters.",
-//   },
-//   {
-//     icon: <FaSnowflake className="icon-red" />,
-//     title: "AC Repair",
-//     price: "₹1800",
-//     duration: "2-4 hours",
-//     description:
-//       "Complete air conditioning system diagnosis, repair, and maintenance for optimal cooling performance.",
-//   },
-//   {
-//     icon: <FaCompactDisc className="icon-red" />,
-//     title: "Brake Service",
-//     price: "₹4500",
-//     duration: "2-3 hours",
-//     description:
-//       "Comprehensive brake system inspection, repair, and replacement for maximum safety and performance.",
-//   },
-//   {
-//     icon: <FaStar className="icon-red" />,
-//     title: "Car Detailing",
-//     price: "₹3400",
-//     duration: "3-5 hours",
-//     description:
-//       "Professional interior and exterior detailing to restore your vehicle's showroom appearance.",
-//   },
-//   {
-//     icon: <FaCog className="icon-red" />,
-//     title: "Tyre & Wheel Alignment",
-//     price: "₹2000",
-//     duration: "1-2 hours",
-//     description:
-//       "Precision wheel alignment and tire services to ensure optimal handling, safety, and tire longevity.",
-//   },
-// ];
+import {
+  FaCarCrash,
+  FaOilCan,
+  FaTools,
+  FaAlignCenter,
+  FaCogs,
+  FaBatteryThreeQuarters,
+} from "react-icons/fa";
+import "./servicesPage.css";
 
-// const ServicesPage = () => {
-//   return (
-//     <section className="services-section">
-//        {/* Header Section with Background */}
-//       <div className="services-hero">
-//         <div className="overlay-services">
-//           <h2 className="hero-title-services">
-//             Our Premium <span className="highlight">Services</span>
-//           </h2>
-//           <p className="hero-subtitle">
-//             From routine maintenance to complex repairs, our experts deliver
-//             top-tier services with the best parts.
-//           </p>
-//         </div>
-//       </div>
-//       <div className="services-grid">
-//         {services.map((service, idx) => (
-//           <div className="service-card" key={idx}>
-//             <div className="service-icon">{service.icon}</div>
-//             <h3 className="service-title">{service.title}</h3>
-//             <div className="service-meta">
-//               <span className="service-price">Starting at {service.price}</span>
-//               <span className="service-duration">
-//                 <FaClock className="clock-icon" /> {service.duration}
-//               </span>
-//             </div>
-//             <p className="service-description">{service.description}</p>
-//             <button className="learn-more-btn">Learn More</button>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ServicesPage;
-import React from 'react';
+const services = [
+  {
+    title: "Engine Diagnostics",
+    icon: <FaCarCrash className="service-icon-m" />,
+    image:
+      "https://i.pinimg.com/originals/fd/7f/9f/fd7f9f5db0c1d0d76c3f6c1b7a84791c.jpg",
+    description:
+      "Complete computerized engine check-up and performance diagnostics to ensure peak performance.",
+    price: "₹799",
+    duration: "Approx. 45 mins",
+  },
+  {
+    title: "Oil and Filters",
+    icon: <FaOilCan className="service-icon-m" />,
+    image:
+      "https://i.pinimg.com/originals/89/11/e6/8911e617308515dc6a91ce8e9c3e6ad0.jpg",
+    description:
+      "High-quality oil and filter replacement to maintain your engine’s health.",
+    price: "₹1,199",
+    duration: "Approx. 30 mins",
+  },
+  {
+    title: "Brake Repair",
+    icon: <FaTools className="service-icon-m" />,
+    image:
+      "https://i.pinimg.com/originals/6c/f8/6b/6cf86bbf2b5eb94b62e0f1fd86f8f8a0.jpg",
+    description:
+      "Thorough brake check, pad replacement, and repairs for complete safety.",
+    price: "₹1,499",
+    duration: "Approx. 60 mins",
+  },
+  {
+    title: "Wheel Alignment",
+    icon: <FaAlignCenter className="service-icon-m" />,
+    image:
+      "https://i.pinimg.com/originals/54/1a/5f/541a5f65e7f22b3dc58f6f6f5e62a4b6.jpg",
+    description:
+      "Precision alignment using laser tech to ensure perfect tire angle & balance.",
+    price: "₹999",
+    duration: "Approx. 40 mins",
+  },
+  {
+    title: "General Service",
+    icon: <FaCogs className="service-icon-m" />,
+    image:
+      "https://i.pinimg.com/originals/76/6a/13/766a13ad8eeae54d8ff626ea234d331b.jpg",
+    description:
+      "Full vehicle health check-up, washing, oiling, filter check, and fluid top-up.",
+    price: "₹1,899",
+    duration: "Approx. 1.5 hrs",
+  },
+  {
+    title: "Battery Checking",
+    icon: <FaBatteryThreeQuarters className="service-icon-m" />,
+    image:
+      "https://i.pinimg.com/originals/f2/e0/35/f2e03580c36edaa20fcf4b4a0f758c53.jpg",
+    description:
+      "Battery voltage test, terminal cleanup, and replacement suggestions.",
+    price: "₹499",
+    duration: "Approx. 20 mins",
+  },
+];
 
 const ServicesPage = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
   return (
-    <div>
-   
+    <section className="services-page">
+      <div className="services-hero">
+        <div className="services-hero-overlay"></div>
+        <div className="services-hero-content">
+          <h2>Our Premium Services</h2>
+          <div className="services-breadcrumb">Car Maintenance & Repairs</div>
+        </div>
+      </div>
+
+      <div className="services-cards">
+        {services.map((service, index) => (
+          <div className="service-card" key={index}>
+            {/* Top Icon */}
+            {service.icon}
+
+            <h3>{service.title}</h3>
+            <div className="service-price">
+              Starting at <span>💰 {service.price}</span>
+            </div>
+            <div className="service-duration">
+              <span>⏱ {service.duration}</span>
+            </div>
+            <p>{service.description}</p>
+            <button
+  className="learn-more-btn"
+  onClick={() => setSelectedService(service)}
+>
+  Learn More
+</button>
+
+
+            {/* Bottom Decorative Icon */}
+            <div className="service-icon-bottom">{service.icon}</div>
+          </div>
+        ))}
+      </div>
+      {selectedService && (
+  <div className="modal-overlay" onClick={() => setSelectedService(null)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <button className="modal-close" onClick={() => setSelectedService(null)}>×</button>
+
+      <div className="modal-header">
+        {selectedService.icon}
+        <h2>{selectedService.title}</h2>
+      </div>
+      <p>{selectedService.description}</p>
+
+      <div className="modal-details">
+        <p><strong>Price:</strong> {selectedService.price}</p>
+        <p><strong>Duration:</strong> {selectedService.duration}</p>
+        {/* Optional Extras */}
+        <p><strong>Note:</strong> Complete diagnostic report with recommendations and cost estimate.</p>
+      </div>
+
+      <button className="modal-book-btn">Book Now</button>
     </div>
+  </div>
+)}
+
+    </section>
   );
-}
+};
 
 export default ServicesPage;

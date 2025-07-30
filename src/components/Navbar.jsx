@@ -48,6 +48,8 @@ const Navbar = () => {
             <div className="dropdown-content">
               <a href="#">Car Products</a>
               <a href="#">Bike Products</a>
+              <a href="/pricing">Pricing</a>
+              
             </div>
           </div>
           <div className="dropdown">

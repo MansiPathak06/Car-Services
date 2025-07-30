@@ -1,0 +1,106 @@
+/* pricingPage.css */
+
+.pricing-section {
+  font-family: 'Segoe UI', sans-serif;
+  color: #1e1e1e;
+  padding: 40px 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.pricing-hero {
+  background: url('https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg') no-repeat center center/cover;
+  padding: 80px 20px 40px;
+  color: #fff;
+}
+
+.pricing-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: #f0c040;
+}
+
+.pricing-intro h3 {
+  font-size: 32px;
+  margin: 40px 0 10px;
+}
+
+.pricing-intro p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  width: 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-name {
+  background-color: #f8a400;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.plan-price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #444;
+  text-align: left;
+}
+
+.plan-features li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.choose-btn {
+  background-color: #f8a400;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose-btn:hover {
+  background-color: #db8c00;
+}

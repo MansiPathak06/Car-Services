@@ -1,286 +1,230 @@
-/* Root Section */
-.services-section {
-  padding: 4rem 1.5rem;
-  background-color: #f9fafb;
-  font-family: "Segoe UI", sans-serif;
-}
-
-/* Header Section */
-.services-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
+/* Hero Section */
 .services-hero {
-  position: relative;
-  background-image: url("https://i.pinimg.com/736x/87/0e/3f/870e3f552c3b2150642852fa872da436.jpg");
+  background-image: url('https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg');
   background-size: cover;
   background-position: center;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-top: -70px; /* Pull behind navbar */
-  padding-top: 10rem; /* Push content below navbar */
-  padding-bottom: 3rem;
-  z-index: 0;
-}
-.overlay-services {
-  text-align: center;
-  color: white;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.hero-title-services {
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 0.8rem;
-}
-
-.hero-subtitle {
-  font-size: 1.125rem;
-  color: #f3f4f6; /* light gray for contrast */
-  line-height: 1.6;
-  margin: 0 auto;
-  max-width: 700px;
-}
-.services-title .highlight {
-  color: #f97316; /* orange */
-}
-
-.services-subtitle {
-  font-size: 1.125rem;
-  color: #6b7280;
-  max-width: 700px;
-  margin: 0.5rem auto 0;
-  line-height: 1.6;
-}
-
-/* Grid Layout */
-.services-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.services-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark layer */
-  z-index: 0;
-}
-
-.overlay-services {
+  height: 350px;
   position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Card Styling */
-.service-card {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-}
-
-/* Icon */
-.service-icon {
-  font-size: 2.5rem;
-  color: #f97316;
-  margin-bottom: 1rem;
-}
-
-/* Title & Description */
-.service-name {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 0.5rem;
-}
-
-.service-description {
-  color: #6b7280;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Price & Duration Info */
-.service-info {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  color: #374151;
-}
-
-.service-info svg {
-  margin-right: 0.4rem;
-  color: #f97316;
-}
-
-/* Features */
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: #374151;
-}
-
-.feature-list li {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  text-align: center;
+}
+.service-icon-bottom {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 40px;
+  color: #f79c2e;
+  opacity: 0.2;
+  pointer-events: none;
 }
 
-.feature-icon {
-  color: #10b981; /* green */
-  margin-right: 0.5rem;
-  font-size: 1rem;
+/* Ensure this for positioning to work */
+.service-card {
+  position: relative;
 }
 
-/* Button */
-.book-btn {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  background-color: #f97316;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+
+.services-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.book-btn:hover {
-  background-color: #ea580c;
+.services-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
 }
-.service-price {
-  color: #ef4444;
-  background-color: #fee2e2;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+
+.services-hero-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-breadcrumb {
+  background-color: #f79c2e;
   display: inline-block;
-  margin-bottom: 0.75rem;
-  font-size: 0.95rem;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 10px;
 }
-.services-section {
-  padding: 40px 20px;
+
+/* Cards */
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
   background-color: #fff;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .service-card {
-  border: 1px solid #eee;
+  background: #f9f9f9;
   border-radius: 12px;
-  padding: 24px;
-  background-color: white;
+  width: 300px;
+  padding: 25px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: transform 0.2s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: #333;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-10px);
 }
 
-.service-icon {
-  font-size: 32px;
-  margin-bottom: 12px;
+.service-icon-m{
+  font-size: 50px;
+  color: #f79c2e;
+  margin-bottom: 15px;
 }
 
-.icon-red {
-  color: #e60023;
-}
-
-.service-title {
-  font-size: 1.25rem;
+.service-card h3 {
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.service-meta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
+.service-price {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 5px;
 }
 
-.service-price {
-  background-color: #fdeaea;
-  color: #e60023;
-  font-weight: 500;
-  font-size: 0.875rem;
-  padding: 4px 10px;
-  border-radius: 999px;
+.service-price span {
+  font-weight: bold;
+  color: #f79c2e;
 }
 
 .service-duration {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.clock-icon {
-  margin-right: 5px;
-  font-size: 0.9rem;
-}
-
-.service-description {
-  font-size: 0.95rem;
+  font-size: 13px;
   color: #555;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
   margin-bottom: 20px;
-  min-height: 60px;
 }
 
 .learn-more-btn {
-  border: 1px solid #ccc;
-  background-color: white;
   padding: 10px 16px;
-  border-radius: 8px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease;
-  font-weight: 500;
 }
 
 .learn-more-btn:hover {
-  background-color: #f8f8f8;
+  background-color: #f79c2e;
+  color: #fff;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .services-hero-content h2 {
+    font-size: 30px;
+  }
+
+  .service-card {
+    width: 90%;
+  }
+}
+/* === MODAL OVERLAY === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* === MODAL CONTENT === */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* === MODAL HEADER === */
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* === MODAL DETAILS === */
+.modal-details p {
+  margin: 0.4rem 0;
+}
+
+/* === CLOSE BUTTON === */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: orange;
+}
+
+/* === BOOK BUTTON === */
+.modal-book-btn {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal-book-btn:hover {
+  background-color: orange;
+}
+
+/* === Fade In Animation === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
