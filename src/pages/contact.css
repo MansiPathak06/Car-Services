@@ -50,13 +50,16 @@
   margin: auto;
 }
 
-.contact-left,
-.contact-right {
+.contact-left-c,
+.contact-right-c {
   flex: 1;
   min-width: 300px;
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.contact-left h2 {
+.contact-left-c h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #222;
@@ -73,7 +76,7 @@
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 90%;
   padding: 12px 15px;
   border: 1px solid #ccc;
   border-radius: 8px;

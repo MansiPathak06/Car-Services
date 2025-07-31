@@ -16,7 +16,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-content">
-        <div className="contact-left">
+        <div className="contact-left-c">
           <h2><FaMapMarkerAlt /> Send Us a Message</h2>
           <form className="contact-form">
             <input type="text" placeholder="Full Name *" required />
@@ -24,11 +24,11 @@ const Contact = () => {
             <input type="tel" placeholder="Phone Number *" required />
             <input type="text" placeholder="Subject" />
             <textarea rows="5" placeholder="Message *" required></textarea>
-            <button type="submit" className="contact-btn">Submit</button>
+            <button type="submit" className="contact-btn-c">Submit</button>
           </form>
         </div>
 
-        <div className="contact-right">
+        <div className="contact-right-c">
           <div className="contact-info">
             <h3>Quick Contact</h3>
             <p><FaPhoneAlt /> +1 (555) 123-4567</p>
