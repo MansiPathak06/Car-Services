@@ -1,5 +1,6 @@
+/* Main Section */
 .workers-section {
-  padding: 90px 20px;
+  padding: 40px 20px;
   text-align: center;
   background-color: #fff;
   font-family: 'Segoe UI', sans-serif;
@@ -44,23 +45,33 @@
   line-height: 1.6;
 }
 
-.workers-slider {
+/* Slider + dots wrapper */
+.workers-slider-wrapper {
   max-width: 1300px;
   margin: 0 auto;
 }
 
+/* Swiper Container */
+.workers-slider {
+  position: relative;
+  overflow: visible;
+}
+
+/* Swiper Slides */
 .worker-card {
   position: relative;
-  
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: transform 0.5s ease;
   cursor: pointer;
-  
+}
+
+.worker-card.active {
+  transform: scale(1.07);
+  z-index: 2;
 }
 
 .worker-card:hover {
   transform: scale(1.04);
-  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
 }
 
 .worker-card img {
@@ -68,11 +79,11 @@
   height: 420px;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
 }
 
+/* Overlay on Image */
 .worker-overlay {
-   position: absolute;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 80px;
@@ -81,7 +92,6 @@
   align-items: center;
   justify-content: center;
   padding: 0 25px;
- 
 }
 
 .worker-text {
@@ -92,8 +102,8 @@
 }
 
 .worker-text span {
- font-weight: 600;
-  color: #222; /* stronger contrast */
+  font-weight: 600;
+  color: #222;
   font-size: 17px;
   white-space: nowrap;
   overflow: hidden;
@@ -107,15 +117,11 @@
   margin-left: 10px;
 }
 
-/* Swiper navigation */
+/* Swiper Navigation Buttons */
 .swiper-button-next,
 .swiper-button-prev {
   color: #f79c2e;
-  transition: all 0.3s;
-}
-
-.swiper-slide {
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.3s;
 }
 
 .swiper-button-next:hover,
@@ -123,13 +129,24 @@
   transform: scale(1.2);
 }
 
-/* Pagination Dots */
-.swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
+/* ✅ Custom Pagination Outside */
+.custom-swiper-pagination {
+  margin-top: 30px;
+  text-align: center;
 }
 
-.swiper-pagination-bullet-active {
+.custom-swiper-pagination .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet-active {
   background: #f79c2e;
 }
 
@@ -155,24 +172,4 @@
   .worker-text .arrow {
     font-size: 22px;
   }
-}
-/* Zoom effect for active slide */
-.worker-card {
-  transition: transform 0.5s ease;
-}
-
-.worker-card.active {
-  transform: scale(1.07);
-  z-index: 2;
-  /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); */
-}
-/* Zoom effect for active slide */
-.worker-card {
-  transition: transform 0.5s ease;
-}
-
-.worker-card.active {
-  transform: scale(1.07);
-  z-index: 2;
-  /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); */
 }

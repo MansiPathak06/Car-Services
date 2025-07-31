@@ -54,38 +54,43 @@ const OurWorkers = () => {
         Our car rental services, in the travel industry and business industry, <br />
         stand apart for their quality and great taste.
       </p>
-
+    <div className="workers-slider-wrapper">
       <div className="workers-slider">
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Pagination, Autoplay]}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        >
-          {workers.map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <div className={`worker-card ${activeIndex === idx ? 'active' : ''}`}>
-                <img src={item.image} alt={item.title} />
-                <div className="worker-overlay">
-                  <div className="worker-text">
-                    <span>{item.title}</span>
-                    <div className="arrow">→</div>
-                  </div>
-                </div>
+         <Swiper
+      spaceBetween={30}
+      slidesPerView={1}
+      navigation
+      pagination={{
+        el: ".custom-swiper-pagination",
+        clickable: true,
+      }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      modules={[Navigation, Pagination, Autoplay]}
+      breakpoints={{
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+    >
+      {workers.map((item, idx) => (
+        <SwiperSlide key={idx}>
+          <div className={`worker-card ${activeIndex === idx ? 'active' : ''}`}>
+            <img src={item.image} alt={item.title} />
+            <div className="worker-overlay">
+              <div className="worker-text">
+                <span>{item.title}</span>
+                <div className="arrow">→</div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+      </div>
+      <div className="custom-swiper-pagination"></div> {/* ✅ Custom dots outside */}
       </div>
     </section>
   );

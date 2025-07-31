@@ -266,20 +266,7 @@ textarea {
   resize: vertical;
 }
 
-.captcha-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
 
-.captcha {
-  font-family: monospace;
-  padding: 5px 10px;
-  background: #eee;
-  display: inline-block;
-  margin-bottom: 10px;
-}
 
 button {
   padding: 12px 20px;
@@ -315,4 +302,64 @@ button:hover {
   .map-box {
     height: 350px;
   }
+}
+.contact-layout-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-map-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1 1 65%;
+}
+
+.quick-contact-box {
+  background-color: rgb(97, 96, 91);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 320px;
+  width: 100%;
+  font-size: 0.95rem;
+  height: 22.5rem;
+}
+
+.quick-contact-box h3,
+.quick-contact-box h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.quick-contact-box p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.emergency-box {
+  background: #fff;
+  color: #111;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.emergency-btn {
+  margin-top: 0.5rem;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
 }

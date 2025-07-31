@@ -114,7 +114,8 @@
   margin-bottom: 20px;
 }
 
-.learn-more-btn {
+.book-service-btn {
+  margin: 5px;
   padding: 10px 16px;
   background-color: #111;
   color: #fff;
@@ -124,7 +125,7 @@
   cursor: pointer;
 }
 
-.learn-more-btn:hover {
+.book-service-btn:hover {
   background-color: #f79c2e;
   color: #fff;
 }

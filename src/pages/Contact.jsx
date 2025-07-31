@@ -33,7 +33,8 @@ const Contact = () => {
           <div className="line yellow"></div>
         </div>
         <p className="contact-description">
-          Our car rental services, in the travel industry and business industry,<br />
+          Our car rental services, in the travel industry and business industry,
+          <br />
           stand apart for their quality and great taste.
         </p>
 
@@ -74,44 +75,74 @@ const Contact = () => {
         </div>
       </div>
       <section className="contact-form-section">
-      <div className="form-map-container">
-        {/* FORM */}
-        <div className="contact-form-box">
-          <h2>Get In Touch !</h2>
-          <p className="subtext">
-            If you’re searching out advice, please fill out this form. We will discover you and get in touch.
-          </p>
+        <div className="contact-layout-wrapper">
+          {/* FORM + MAP */}
+          <div className="form-map-container">
+            {/* FORM */}
+            <div className="contact-form-box">
+              <h2>Get In Touch !</h2>
+              <p className="subtext">
+                If you’re searching out advice, please fill out this form. We
+                will discover you and get in touch.
+              </p>
 
-          <form>
-            <div className="form-row">
-              <input type="text" placeholder="Your Name *" required />
-              <input type="email" placeholder="Your Email *" required />
+              <form>
+                <div className="form-row">
+                  <input type="text" placeholder="Your Name *" required />
+                  <input type="email" placeholder="Your Email *" required />
+                </div>
+                <div className="form-row">
+                  <input type="text" placeholder="Your Subject *" required />
+                  <input type="tel" placeholder="Contact Number" />
+                </div>
+                <textarea placeholder="Message *" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
             </div>
-            <div className="form-row">
-              <input type="text" placeholder="Your Subject *" required />
-              <input type="tel" placeholder="Contact Number" />
-            </div>
-            <textarea placeholder="Message *" rows="5" required></textarea>
-            <input type="text" placeholder="Type the below word" className="captcha-input" />
-            <div className="captcha">catch</div>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
 
-        {/* MAP */}
-        <div className="map-box">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19808.639996031536!2d-0.1417495251852613!3d51.509865000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c276a1ea9b%3A0x48e4c2a353f4e07f!2sLondon!5e0!3m2!1sen!2sin!4v1692186040244!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Map"
-          ></iframe>
+            {/* MAP */}
+            <div className="map-box">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=..."
+                width="100%"
+                height="100%"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* NEW: QUICK CONTACT BOX */}
+          <div className="quick-contact-box">
+            <h3>Quick Contact</h3>
+            <p>
+              <strong>📞 +1 (555) 123-4567</strong>
+              <br />
+              Call for immediate assistance
+            </p>
+            <p>
+              <strong>📧 info@motors.com</strong>
+              <br />
+              Email us your questions
+            </p>
+
+            <h4>Follow Us</h4>
+            <div className="social-icons">
+              <i className="fab fa-facebook-f"></i>
+              <i className="fab fa-instagram"></i>
+              <i className="fab fa-twitter"></i>
+            </div>
+
+            <div className="emergency-box">
+              <h4>🚨 Emergency Service</h4>
+              <p>Need roadside assistance or emergency repairs?</p>
+              <button className="emergency-btn">Call Emergency Line</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 };

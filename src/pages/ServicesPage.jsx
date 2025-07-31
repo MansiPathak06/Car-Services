@@ -27,7 +27,7 @@ const services = [
     image:
       "https://i.pinimg.com/originals/89/11/e6/8911e617308515dc6a91ce8e9c3e6ad0.jpg",
     description:
-      "High-quality oil and filter replacement to maintain your engine’s health.",
+      "Your car does the heavy lifting — protect its engine with clean oil and advanced filters built to last, mile after mile.",
     price: "₹1,199",
     duration: "Approx. 30 mins",
   },
@@ -101,41 +101,51 @@ const ServicesPage = () => {
             </div>
             <p>{service.description}</p>
             <button
-  className="learn-more-btn"
-  onClick={() => setSelectedService(service)}
->
-  Learn More
-</button>
-
+              className="book-service-btn"
+              onClick={() => setSelectedService(service)}
+            >
+              Book Service
+            </button>
 
             {/* Bottom Decorative Icon */}
-            <div className="service-icon-bottom">{service.icon}</div>
+            
           </div>
         ))}
       </div>
       {selectedService && (
-  <div className="modal-overlay" onClick={() => setSelectedService(null)}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <button className="modal-close" onClick={() => setSelectedService(null)}>×</button>
+        <div className="modal-overlay" onClick={() => setSelectedService(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="modal-close"
+              onClick={() => setSelectedService(null)}
+            >
+              ×
+            </button>
 
-      <div className="modal-header">
-        {selectedService.icon}
-        <h2>{selectedService.title}</h2>
-      </div>
-      <p>{selectedService.description}</p>
+            <div className="modal-header">
+              {selectedService.icon}
+              <h2>{selectedService.title}</h2>
+            </div>
+            <p>{selectedService.description}</p>
 
-      <div className="modal-details">
-        <p><strong>Price:</strong> {selectedService.price}</p>
-        <p><strong>Duration:</strong> {selectedService.duration}</p>
-        {/* Optional Extras */}
-        <p><strong>Note:</strong> Complete diagnostic report with recommendations and cost estimate.</p>
-      </div>
+            <div className="modal-details">
+              <p>
+                <strong>Price:</strong> {selectedService.price}
+              </p>
+              <p>
+                <strong>Duration:</strong> {selectedService.duration}
+              </p>
+              {/* Optional Extras */}
+              <p>
+                <strong>Note:</strong> Complete diagnostic report with
+                recommendations and cost estimate.
+              </p>
+            </div>
 
-      <button className="modal-book-btn">Book Now</button>
-    </div>
-  </div>
-)}
-
+            <button className="modal-book-btn">Book Now</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

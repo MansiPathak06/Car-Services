@@ -9,6 +9,7 @@ import ServicesPage from './pages/ServicesPage';
 import Pricing from './pages/Pricing';
 import Products from './pages/Products';
 import Gallery from './pages/Gallery';
+import BookService from './components/BookService';
 
 const App = () => {
   return (
@@ -21,6 +22,8 @@ const App = () => {
         <Route path="/pricing" element={<Pricing/>} />
         <Route path="/products" element={<Products/>} />
         <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/bookservice" element={<BookService/>} />
+        
       </Routes>
       <Footer />
     </Router>

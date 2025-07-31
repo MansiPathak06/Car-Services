@@ -54,7 +54,7 @@ const Navbar = () => {
           <a href="/contact">CONTACT</a>
         </nav>
 
-        <Link to="/contact">
+        <Link to="/bookservice">
           <button className="quote-btn">Book Service</button>
         </Link>
       </div>
