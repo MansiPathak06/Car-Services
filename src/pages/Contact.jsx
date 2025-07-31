@@ -7,7 +7,7 @@ const Contact = () => {
     <div className="contact-page">
       <div className="contact-hero-section">
         <div className="contact-overlay">
-          <h1 className="contact-title">Contact <span className="highlight">TurboCare</span></h1>
+          <h1 className="contact-title">Contact <span className="highlight">Us</span></h1>
           <p className="contact-subtitle">
             Get in touch with our expert team. We're here to answer your questions and help you
             with all your automotive service needs.
