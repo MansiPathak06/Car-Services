@@ -1,108 +1,101 @@
-import React from "react";
-import "./Contact.css";
+import React from 'react';
+import './contact.css';
+import { FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaTwitter, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <div className="contact-container">
-      {/* Header */}
-      <div className="contact-header">
-        <h1>
-          Contact <span className="contact-highlight">TurboCare</span>
-        </h1>
-        <p>
-          Get in touch with our expert team. We're here to answer your questions and help you
-          with all your automotive service needs.
-        </p>
+    <div className="contact-page">
+      <div className="contact-hero-section">
+        <div className="contact-overlay">
+          <h1 className="contact-title">Contact <span className="highlight">TurboCare</span></h1>
+          <p className="contact-subtitle">
+            Get in touch with our expert team. We're here to answer your questions and help you
+            with all your automotive service needs.
+          </p>
+        </div>
       </div>
 
-      {/* Form + Sidebar */}
-      <div className="contact-main">
-        <div className="contact-form-section">
-          <h2>
-            <i className="fa-solid fa-paper-plane"></i> Send Us a Message
-          </h2>
-          <form>
-            <div className="contact-row">
-              <input type="text" placeholder="Enter your full name" required />
-              <input type="email" placeholder="your.email@example.com" required />
-            </div>
-            <div className="contact-row">
-              <input type="text" placeholder="+1 (555) 123-4567" />
-              <input type="text" placeholder="How can we help you?" />
-            </div>
-            <textarea placeholder="Tell us about your automotive needs or questions..." required />
-            <button type="submit" className="contact-submit-btn">Submit</button>
+      <div className="contact-content">
+        <div className="contact-left">
+          <h2><FaMapMarkerAlt /> Send Us a Message</h2>
+          <form className="contact-form">
+            <input type="text" placeholder="Full Name *" required />
+            <input type="email" placeholder="Email Address *" required />
+            <input type="tel" placeholder="Phone Number *" required />
+            <input type="text" placeholder="Subject" />
+            <textarea rows="5" placeholder="Message *" required></textarea>
+            <button type="submit" className="contact-btn">Submit</button>
           </form>
         </div>
 
-        <div className="contact-sidebar">
-          <div className="contact-quick">
+        <div className="contact-right">
+          <div className="contact-info">
             <h3>Quick Contact</h3>
-            <p><i className="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
-            <span>Call for immediate assistance</span>
-            <p><i className="fa-solid fa-envelope"></i> info@turbocare.com</p>
-            <span>Email us your questions</span>
-          </div>
-          <div className="contact-social">
-            <h4>Follow Us</h4>
-            <div className="social-icons">
-              <i className="fa-brands fa-facebook-f"></i>
-              <i className="fa-brands fa-instagram"></i>
-              <i className="fa-brands fa-twitter"></i>
+            <p><FaPhoneAlt /> +1 (555) 123-4567</p>
+            <span className="contact-note">Call for immediate assistance</span>
+            <p><FaEnvelope /> info@turbocare.com</p>
+            <span className="contact-note">Email us your questions</span>
+
+            <div className="contact-socials">
+              <a href="/"><FaFacebookF /></a>
+              <a href="/"><FaInstagram /></a>
+              <a href="/"><FaTwitter /></a>
+            </div>
+
+            <hr />
+
+            <div className="emergency-box-c">
+              <h4>Emergency Service</h4>
+              <p>Need roadside assistance or emergency repairs?</p>
+              <button className="contact-btn-c">Call Emergency Line</button>
             </div>
           </div>
         </div>
       </div>
+<section className="contact-info-grid">
+  <div className="contact-info-box">
+    <i className="fas fa-map-marker-alt"></i>
+    <h4>Our Location</h4>
+    <p>123 Auto Service Drive</p>
+    <p>Automotive District, AD 12345</p>
+    <p>United States</p>
+  </div>
 
-      {/* Info Grid */}
-      <div className="contact-info-grid">
-        <div className="info-item">
-          <i className="fa-solid fa-location-dot icon-orange"></i>
-          <h4>Our Location</h4>
-          <p>123 Auto Service Drive<br />Automotive District, AD 12345<br />United States</p>
-        </div>
-        <div className="info-item">
-          <i className="fa-solid fa-phone icon-orange"></i>
-          <h4>Phone Numbers</h4>
-          <p>
-            Main: +1 (555) 123-4567<br />
-            Emergency: +1 (555) 123-4568<br />
-            Parts Dept: +1 (555) 123-4569
-          </p>
-        </div>
-        <div className="info-item">
-          <i className="fa-solid fa-envelope icon-orange"></i>
-          <h4>Email Addresses</h4>
-          <p>
-            General: info@turbocare.com<br />
-            Service: service@turbocare.com<br />
-            Parts: parts@turbocare.com
-          </p>
-        </div>
-        <div className="info-item">
-          <i className="fa-solid fa-clock icon-orange"></i>
-          <h4>Business Hours</h4>
-          <p>
-            Monday - Friday: 8:00 AM - 6:00 PM<br />
-            Saturday: 9:00 AM - 4:00 PM<br />
-            Sunday: Closed
-          </p>
-        </div>
-      </div>
+  <div className="contact-info-box">
+    <i className="fas fa-phone-alt"></i>
+    <h4>Phone Numbers</h4>
+    <p>Main: +1 (555) 123-4567</p>
+    <p>Emergency: +1 (555) 123-4568</p>
+    <p>Parts: +1 (555) 123-4569</p>
+  </div>
 
-      {/* Map */}
-      <div className="contact-map">
-        <h3><i className="fa-solid fa-location-dot icon-orange"></i> Find Us Here</h3>
-        <iframe
-          title="TurboCare Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9621718034276!2d-74.00776802355784!3d40.709507037215746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19b7a7d69d%3A0x5d6e48f7dbf30bc6!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
+  <div className="contact-info-box">
+    <i className="fas fa-envelope"></i>
+    <h4>Email Addresses</h4>
+    <p>General: info@turbocare.com</p>
+    <p>Service: service@turbocare.com</p>
+    <p>Parts: parts@turbocare.com</p>
+  </div>
+
+  <div className="contact-info-box">
+    <i className="fas fa-clock"></i>
+    <h4>Business Hours</h4>
+    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+    <p>Saturday: 9:00 AM - 4:00 PM</p>
+    <p>Sunday: Closed</p>
+  </div>
+</section>
+
+<section className="contact-map">
+  <h3>📍 Find Us Here</h3>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.893829593324!2d-74.00895368459355!3d40.71006217933101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a17810cbfcf%3A0x4a3f6e5042a32c73!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sin!4v1633245616105!5m2!1sen!2sin"
+    loading="lazy"
+    allowFullScreen=""
+  ></iframe>
+</section>
+
+     
     </div>
   );
 };
