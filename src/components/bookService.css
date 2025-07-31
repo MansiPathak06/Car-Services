@@ -13,31 +13,56 @@ body {
 
 .book-service-wrapper {
   min-height: 100vh;
-  padding: 4rem 1rem;
   background-color: var(--bg-light);
-  
 }
 
-.book-service-header {
+/* Hero Banner - Same as Contact Page */
+.book-service-hero {
+  background-image: url('https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 4rem;
-  
 }
 
-.book-service-header h1 {
-  font-size: 2.5rem;
+.book-service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.book-service-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.book-service-hero-content h1 {
+  font-size: 40px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.book-service-header span {
-  color: var(--orange-main);
+.book-service-hero-content span {
+  color:white
 }
 
-.book-service-header p {
-  max-width: 600px;
-  margin: 1rem auto 0;
-  font-size: 1.1rem;
-  color: var(--text-muted);
+.book-service-breadcrumb {
+  background-color: #f79c2e;
+  color: white;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Main Content */
+.book-service-main {
+  padding: 4rem 1rem;
 }
 
 .book-grid {
@@ -162,4 +187,25 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .book-service-hero-content h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-service-hero {
+    height: 280px;
+  }
+
+  .book-service-main {
+    padding: 60px 15px;
+  }
+
+  .book-service-hero-content h1 {
+    font-size: 24px;
+  }
 }
