@@ -55,7 +55,7 @@ const WhatWeHaveDone = () => {
           {services.slice(0, 3).map((s, i) => (
             <div key={i} className="done-item">
               <h4>
-                {s.title} <span className="icon">{s.icon}</span>
+                {s.title} <span className="icon-m">{s.icon}</span>
               </h4>
               <p>{s.desc}</p>
             </div>
@@ -81,7 +81,7 @@ const WhatWeHaveDone = () => {
           {services.slice(3, 6).map((s, i) => (
             <div key={i} className="done-item">
               <h4>
-                {s.title} <span className="icon">{s.icon}</span>
+                {s.title} <span className="icon-m">{s.icon}</span>
               </h4>
               <p>{s.desc}</p>
             </div>

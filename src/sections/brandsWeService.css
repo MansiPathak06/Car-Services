@@ -71,7 +71,7 @@
   background-color: white;
   border-radius: 50%;
   width: 60px;
-  height: 60px;
+  height: 50px;
   margin: 0 auto 15px;
   display: flex;
   align-items: center;
@@ -84,3 +84,61 @@
   height: auto;
   object-fit: contain;
 }
+/* Only show grid on desktop */
+.desktop-only {
+  display: flex;
+}
+.mobile-only {
+  display: none;
+  margin-top: 10rem;
+}
+/* Swiper slide content centered */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+.mobile-only .brand-logo-wrapper{
+padding: 5px;
+}
+.mobile-only .brand-card{
+ border-radius: 1%;
+ background-color: rgb(251, 248, 245);
+}
+.brands-slider {
+ position: relative;
+  padding-bottom: -10px; / /* optional extra space below *//* Adjust this value as needed */
+}
+.swiper-pagination {
+bottom: 10px !important; /* Not negative */
+  position: absolute !important;
+  text-align: center;
+  width: 100%;
+}
+/* Add space below Swiper for pagination */
+.brands-slider .swiper {
+  padding-bottom: 50px;
+}
+
+
+.swiper-pagination-bullet {
+  background: orange;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Show slider only on small screens */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+ 
+}
+

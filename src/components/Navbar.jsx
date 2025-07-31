@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,8 +28,10 @@ const Navbar = () => {
           <span className="logo-tagline">EASY CARE & LIFE</span>
         </div>
 
-        <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
-
+        <div
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -39,18 +40,13 @@ const Navbar = () => {
         <nav className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
           <a href="/">HOME</a>
 
-          
+          <a href="/services">SERVICES</a>
+          <a href="/products">PRODUCTS</a>
+          <a href="/pricing">PRICING</a>
 
-         
-            <a href="/services">SERVICES</a>
-            <a href="/products">PRODUCTS</a>
-            <a href="/pricing">PRICING</a>
-            
-          
-          
           {/* <div className="dropdown"> */}
-            <a href="#">BLOG </a>
-            {/* <div className="dropdown-content">
+          <a href="#">BLOG </a>
+          {/* <div className="dropdown-content">
               <a href="#">Latest Posts</a>
             </div> */}
           {/* </div> */}
@@ -58,10 +54,9 @@ const Navbar = () => {
           <a href="/contact">CONTACT</a>
         </nav>
 
-       <Link to="/contact">
-  <button className="quote-btn">Free Quote</button>
-</Link>
-
+        <Link to="/contact">
+          <button className="quote-btn">Book Service</button>
+        </Link>
       </div>
     </header>
   );

@@ -2,10 +2,26 @@ import React from "react";
 import "./workProcess.css";
 
 const steps = [
-  { step: "01", title: "Choose Services", desc: "We help you discover any protection inclusions that are ideal for you." },
-  { step: "02", title: "Make Appointment", desc: "We help you discover any protection inclusions that are ideal for you." },
-  { step: "03", title: "Confirm Request", desc: "We help you discover any protection inclusions that are ideal for you." },
-  { step: "04", title: "Pick Your Car", desc: "We help you discover any protection inclusions that are ideal for you." },
+  {
+    step: "01",
+    title: "Choose Services",
+    desc: "We help you discover any protection inclusions that are ideal for you.",
+  },
+  {
+    step: "02",
+    title: "Make Appointment",
+    desc: "We help you discover any protection inclusions that are ideal for you.",
+  },
+  {
+    step: "03",
+    title: "Confirm Request",
+    desc: "We help you discover any protection inclusions that are ideal for you.",
+  },
+  {
+    step: "04",
+    title: "Pick Your Car",
+    desc: "We help you discover any protection inclusions that are ideal for you.",
+  },
 ];
 
 const WorkProcess = () => {
@@ -18,16 +34,22 @@ const WorkProcess = () => {
         <div className="work-line yellow"></div>
       </div>
       <p className="work-subtext">
-        Our car rental services, in the travel industry and business industry, <br />
+        Our car rental services, in the travel industry and business industry,{" "}
+        <br />
         stand apart for their quality and great taste.
       </p>
 
       <div className="work-steps-container">
-        
         <div className="work-steps">
           {steps.map((item, idx) => (
             <div key={idx} className="work-step">
               <div className="work-circle">{item.step}</div>
+
+              {/* Show connector only for all except the last item */}
+              {idx !== steps.length - 1 && (
+                <div className="mobile-connector"></div>
+              )}
+
               <h4>{item.title}</h4>
               <p>{item.desc}</p>
             </div>

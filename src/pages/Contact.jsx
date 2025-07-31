@@ -41,7 +41,7 @@ const Contact = () => {
         <div className="contact-cards">
           <div
             className="contact-card"
-            style={{ backgroundImage: "url('https://i.pinimg.com/736x/f6/19/d3/f619d3bababbd21641ffc4c9236e202e.jpg')" }}
+            // style={{ backgroundImage: "url('https://i.pinimg.com/736x/f6/19/d3/f619d3bababbd21641ffc4c9236e202e.jpg')" }}
           >
             <div className="contact-card-content">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
@@ -52,7 +52,7 @@ const Contact = () => {
 
           <div
             className="contact-card"
-            style={{ backgroundImage: "url('https://i.pinimg.com/736x/87/04/0c/87040cb8c51cb7b1f236c816189d2002.jpg')"} }
+            // style={{ backgroundImage: "url('https://i.pinimg.com/736x/21/80/9a/21809ab1eb190d6b4f35f8a2eca968aa.jpg')"} }
           >
             <div className="contact-card-content">
               <FontAwesomeIcon icon={faPhoneAlt} className="icon" />
@@ -63,7 +63,7 @@ const Contact = () => {
 
           <div
             className="contact-card"
-            style={{ backgroundImage: "url('https://i.pinimg.com/1200x/37/24/f7/3724f774ad7cbcb469d0e52432ab743f.jpg')" }}
+            // style={{ backgroundImage: "url('https://i.pinimg.com/1200x/37/24/f7/3724f774ad7cbcb469d0e52432ab743f.jpg')" }}
           >
             <div className="contact-card-content">
               <FontAwesomeIcon icon={faEnvelope} className="icon" />

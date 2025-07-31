@@ -3,7 +3,7 @@
   padding: 80px 20px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
+ 
 }
 
 .work-title {
@@ -71,7 +71,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  background-color: #fff;
+  
   padding: 10px 10px 20px;
   transition: all 0.3s ease-in-out;
   animation: fadeSlideUp 0.6s ease-in-out forwards;
@@ -82,6 +82,7 @@
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+
 
 .work-circle {
   width: 65px;
@@ -150,6 +151,11 @@
   .work-line-connector {
     display: none;
   }
+  .work-steps::before {
+    display: none;
+  
+}
+
 
   .work-step {
     max-width: 100%;
@@ -163,5 +169,30 @@
 
   .work-subtext {
     font-size: 15px;
+  }
+}
+.work-steps::before {
+  content: "";
+  position: absolute;
+  top: 37px; /* half of .work-circle height (65px) */
+  left: 10%;  /* start after first circle */
+  right: 10%; /* end before last circle */
+  height: 1px;
+  background-color: #f79c2e;
+  z-index: 0;
+  
+}
+/* Mobile vertical connector */
+.mobile-connector {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-connector {
+    display: block;
+    width: 2px;
+    height: 40px;
+    background-color: #f79c2e;
+    margin: -10px auto 20px;
   }
 }

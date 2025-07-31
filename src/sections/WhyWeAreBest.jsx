@@ -5,7 +5,7 @@ const features = [
   {
     id: 1,
     title: 'Expert Mechanic',
-    image: '/image1.jpg',
+    image: 'https://i.pinimg.com/736x/1c/47/83/1c478328a69d9a1abb85339454003d34.jpg',
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ const WhyWeAreBest = () => {
               <div className="overlay-text">
                 <h3>{item.title}</h3>
                 <p>We will help return your car to a functioning condition</p>
-                <a href="#">Read More →</a>
+                
               </div>
             ) : (
               <div className="badge">

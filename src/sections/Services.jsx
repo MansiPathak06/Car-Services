@@ -58,14 +58,14 @@ const Services = () => {
 
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <div className="service-card-s" key={index}>
             <img src={service.image} alt={service.title} className="service-image" />
             <div className="service-overlay">
               <h3 className="service-title">{service.title}</h3>
               <p className="service-text-s">{service.description}</p>
               <Link to="/services" className="read-more-s">Read More ➤</Link>
 
-              <span className="service-icon">{service.icon}</span>
+              {/* <span className="service-icon">{service.icon}</span> */}
             </div>
           </div>
         ))}

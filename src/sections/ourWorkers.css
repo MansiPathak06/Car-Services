@@ -60,7 +60,7 @@
 
 .worker-card:hover {
   transform: scale(1.04);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
 }
 
 .worker-card img {
@@ -72,16 +72,16 @@
 }
 
 .worker-overlay {
-  position: absolute;
+   position: absolute;
   bottom: 0;
   width: 100%;
   height: 80px;
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.92);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 25px;
-  backdrop-filter: blur(6px);
+ 
 }
 
 .worker-text {
@@ -92,9 +92,12 @@
 }
 
 .worker-text span {
-  font-weight: 600;
-  color: #222;
+ font-weight: 600;
+  color: #222; /* stronger contrast */
   font-size: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .worker-text .arrow {
@@ -161,7 +164,7 @@
 .worker-card.active {
   transform: scale(1.07);
   z-index: 2;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); */
 }
 /* Zoom effect for active slide */
 .worker-card {
@@ -171,5 +174,5 @@
 .worker-card.active {
   transform: scale(1.07);
   z-index: 2;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3); */
 }
