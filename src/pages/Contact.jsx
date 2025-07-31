@@ -1,148 +1,108 @@
 import React from "react";
-import "./contact.css";
-
-// Font Awesome Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMapMarkerAlt,
-  faPhoneAlt,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import Footer from "../components/Footer";
+import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="contact-page">
-      {/* Hero Section */}
-      <div className="contact-hero">
-        <div className="contact-hero-overlay" />
-        <div className="contact-hero-content">
-          <h2>Contact Us</h2>
-          <p className="contact-breadcrumb">
-            Home &gt; <span className="highlight">Contact Us</span>
+    <div className="contact-container">
+      {/* Header */}
+      <div className="contact-header">
+        <h1>
+          Contact <span className="contact-highlight">TurboCare</span>
+        </h1>
+        <p>
+          Get in touch with our expert team. We're here to answer your questions and help you
+          with all your automotive service needs.
+        </p>
+      </div>
+
+      {/* Form + Sidebar */}
+      <div className="contact-main">
+        <div className="contact-form-section">
+          <h2>
+            <i className="fa-solid fa-paper-plane"></i> Send Us a Message
+          </h2>
+          <form>
+            <div className="contact-row">
+              <input type="text" placeholder="Enter your full name" required />
+              <input type="email" placeholder="your.email@example.com" required />
+            </div>
+            <div className="contact-row">
+              <input type="text" placeholder="+1 (555) 123-4567" />
+              <input type="text" placeholder="How can we help you?" />
+            </div>
+            <textarea placeholder="Tell us about your automotive needs or questions..." required />
+            <button type="submit" className="contact-submit-btn">Submit</button>
+          </form>
+        </div>
+
+        <div className="contact-sidebar">
+          <div className="contact-quick">
+            <h3>Quick Contact</h3>
+            <p><i className="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+            <span>Call for immediate assistance</span>
+            <p><i className="fa-solid fa-envelope"></i> info@turbocare.com</p>
+            <span>Email us your questions</span>
+          </div>
+          <div className="contact-social">
+            <h4>Follow Us</h4>
+            <div className="social-icons">
+              <i className="fa-brands fa-facebook-f"></i>
+              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-twitter"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Info Grid */}
+      <div className="contact-info-grid">
+        <div className="info-item">
+          <i className="fa-solid fa-location-dot icon-orange"></i>
+          <h4>Our Location</h4>
+          <p>123 Auto Service Drive<br />Automotive District, AD 12345<br />United States</p>
+        </div>
+        <div className="info-item">
+          <i className="fa-solid fa-phone icon-orange"></i>
+          <h4>Phone Numbers</h4>
+          <p>
+            Main: +1 (555) 123-4567<br />
+            Emergency: +1 (555) 123-4568<br />
+            Parts Dept: +1 (555) 123-4569
+          </p>
+        </div>
+        <div className="info-item">
+          <i className="fa-solid fa-envelope icon-orange"></i>
+          <h4>Email Addresses</h4>
+          <p>
+            General: info@turbocare.com<br />
+            Service: service@turbocare.com<br />
+            Parts: parts@turbocare.com
+          </p>
+        </div>
+        <div className="info-item">
+          <i className="fa-solid fa-clock icon-orange"></i>
+          <h4>Business Hours</h4>
+          <p>
+            Monday - Friday: 8:00 AM - 6:00 PM<br />
+            Saturday: 9:00 AM - 4:00 PM<br />
+            Sunday: Closed
           </p>
         </div>
       </div>
 
-      {/* Heading */}
-      <div className="contact-main">
-        <h2>Need Any Services For Cars?</h2>
-        <div className="contact-divider">
-          <div className="line"></div>
-          <div className="dot"></div>
-          <div className="line yellow"></div>
-        </div>
-        <p className="contact-description">
-          Our car rental services, in the travel industry and business industry,
-          <br />
-          stand apart for their quality and great taste.
-        </p>
-
-        {/* Cards */}
-        <div className="contact-cards">
-          <div
-            className="contact-card"
-            // style={{ backgroundImage: "url('https://i.pinimg.com/736x/f6/19/d3/f619d3bababbd21641ffc4c9236e202e.jpg')" }}
-          >
-            <div className="contact-card-content">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-              <h4>174 Guild Street, Town MT.</h4>
-              <p>London, UK</p>
-            </div>
-          </div>
-
-          <div
-            className="contact-card"
-            // style={{ backgroundImage: "url('https://i.pinimg.com/736x/21/80/9a/21809ab1eb190d6b4f35f8a2eca968aa.jpg')"} }
-          >
-            <div className="contact-card-content">
-              <FontAwesomeIcon icon={faPhoneAlt} className="icon" />
-              <h4>(+44) 123 456 789</h4>
-              <p>Mon-Sat 9:00am - 5:00pm</p>
-            </div>
-          </div>
-
-          <div
-            className="contact-card"
-            // style={{ backgroundImage: "url('https://i.pinimg.com/1200x/37/24/f7/3724f774ad7cbcb469d0e52432ab743f.jpg')" }}
-          >
-            <div className="contact-card-content">
-              <FontAwesomeIcon icon={faEnvelope} className="icon" />
-              <h4>example@youremail.com</h4>
-              <p>24 x 7 online support</p>
-            </div>
-          </div>
-        </div>
+      {/* Map */}
+      <div className="contact-map">
+        <h3><i className="fa-solid fa-location-dot icon-orange"></i> Find Us Here</h3>
+        <iframe
+          title="TurboCare Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9621718034276!2d-74.00776802355784!3d40.709507037215746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19b7a7d69d%3A0x5d6e48f7dbf30bc6!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
       </div>
-      <section className="contact-form-section">
-        <div className="contact-layout-wrapper">
-          {/* FORM + MAP */}
-          <div className="form-map-container">
-            {/* FORM */}
-            <div className="contact-form-box">
-              <h2>Get In Touch !</h2>
-              <p className="subtext">
-                If you’re searching out advice, please fill out this form. We
-                will discover you and get in touch.
-              </p>
-
-              <form>
-                <div className="form-row">
-                  <input type="text" placeholder="Your Name *" required />
-                  <input type="email" placeholder="Your Email *" required />
-                </div>
-                <div className="form-row">
-                  <input type="text" placeholder="Your Subject *" required />
-                  <input type="tel" placeholder="Contact Number" />
-                </div>
-                <textarea placeholder="Message *" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-              </form>
-            </div>
-
-            {/* MAP */}
-            <div className="map-box">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=..."
-                width="100%"
-                height="100%"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Map"
-              ></iframe>
-            </div>
-          </div>
-
-          {/* NEW: QUICK CONTACT BOX */}
-          <div className="quick-contact-box">
-            <h3>Quick Contact</h3>
-            <p>
-              <strong>📞 +1 (555) 123-4567</strong>
-              <br />
-              Call for immediate assistance
-            </p>
-            <p>
-              <strong>📧 info@motors.com</strong>
-              <br />
-              Email us your questions
-            </p>
-
-            <h4>Follow Us</h4>
-            <div className="social-icons">
-              <i className="fab fa-facebook-f"></i>
-              <i className="fab fa-instagram"></i>
-              <i className="fab fa-twitter"></i>
-            </div>
-
-            <div className="emergency-box">
-              <h4>🚨 Emergency Service</h4>
-              <p>Need roadside assistance or emergency repairs?</p>
-              <button className="emergency-btn">Call Emergency Line</button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

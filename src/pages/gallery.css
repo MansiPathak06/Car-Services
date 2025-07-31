@@ -145,3 +145,32 @@
     font-size: 28px;
   }
 }
+/* Shared background for heading and navbar */
+.bg-overlay-section {
+  background-image: url('https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.bg-overlay-section h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bg-overlay-section p {
+  font-size: 16px;
+  color: #eee;
+  margin-top: 10px;
+}
+
+/* Optional: Navbar background (if class is known) */
+.main-navbar {
+  background-image: url('https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg');
+  background-size: cover;
+  background-position: center;
+}
