@@ -37,7 +37,7 @@ const Pricing = () => {
               <li>Break Adjustment</li>
               <li>Cambelt Replacement</li>
             </ul>
-            <button className="choose-btn">Choose</button>
+
           </div>
 
           <div className="pricing-card">
@@ -50,7 +50,7 @@ const Pricing = () => {
               <li>Break Adjustments</li>
               <li>Cambelt Replacement</li>
             </ul>
-            <button className="choose-btn">Choose</button>
+            
           </div>
         </div>
       </div>

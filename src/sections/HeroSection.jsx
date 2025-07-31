@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './herosection.css';
 
 const slides = [
@@ -17,6 +18,7 @@ const slides = [
 ];
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
    const [animate, setAnimate] = useState(true); // ✅ This was missing or misplaced
 
@@ -41,7 +43,9 @@ const HeroSection = () => {
         <div className={`hero-content ${animate ? 'fade-in-up' : ''}`}>
           <h1>{slides[currentSlide].title}</h1>
           <p>{slides[currentSlide].description}</p>
-          <button className="hero-btn">Get A Service</button>
+           <button className="hero-btn" onClick={() => navigate('/bookservice')}>
+      Get A Service
+    </button>
         </div>
       </div>
     </section>

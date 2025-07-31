@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 import {
   FaCarCrash,
@@ -74,6 +75,7 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
   const [selectedService, setSelectedService] = useState(null);
 
   return (
@@ -142,7 +144,9 @@ const ServicesPage = () => {
               </p>
             </div>
 
-            <button className="modal-book-btn">Book Now</button>
+             <button className="modal-book-btn" onClick={() => navigate('/bookservice')}>
+      Book Now
+    </button>
           </div>
         </div>
       )}
