@@ -38,21 +38,20 @@ const Navbar = () => {
         </div>
 
         <nav className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
-          <a href="/">HOME</a>
+  <a href="/">HOME</a>
+  <a href="/services">SERVICES</a>
+  <a href="/products">PRODUCTS</a>
+  <a href="/pricing">PRICING</a>
+  <a href="/blog">BLOG</a>
+  <a href="/gallery">GALLERY</a>
+  <a href="/contact">CONTACT</a>
 
-          <a href="/services">SERVICES</a>
-          <a href="/products">PRODUCTS</a>
-          <a href="/pricing">PRICING</a>
+  {/* ✅ This is the correct and working version */}
+  <Link to="/bookservice" className="mobile-book-btn" onClick={() => setMenuOpen(false)}>
+    <button className="quote-btn">Book Service</button>
+  </Link>
+</nav>
 
-          {/* <div className="dropdown"> */}
-          <a href="/blog">BLOG </a>
-          {/* <div className="dropdown-content">
-              <a href="#">Latest Posts</a>
-            </div> */}
-          {/* </div> */}
-          <a href="/gallery">GALLERY</a>
-          <a href="/contact">CONTACT</a>
-        </nav>
 
         <Link to="/bookservice">
           <button className="quote-btn">Book Service</button>

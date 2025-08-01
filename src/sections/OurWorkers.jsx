@@ -14,7 +14,7 @@ import "./ourWorkers.css";
 
 const workers = [
   {
-    image: "https://i.pinimg.com/1200x/69/d1/c5/69d1c5ea2961e8f7b5b7dc401a411694.jpg",
+    image: "https://i.pinimg.com/736x/0e/41/2d/0e412d2d691efd14b910ef3707bc9920.jpg",
     title: "Car Diagnostic",
   },
   {
@@ -59,7 +59,7 @@ const OurWorkers = () => {
          <Swiper
       spaceBetween={30}
       slidesPerView={1}
-      navigation
+     
       pagination={{
         el: ".custom-swiper-pagination",
         clickable: true,

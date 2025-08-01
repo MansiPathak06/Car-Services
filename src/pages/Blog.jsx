@@ -1,6 +1,7 @@
 import React from 'react';
 import './blog.css';
 import { FaRegComments } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // Import Link
 
 const blogs = [
   {
@@ -35,7 +36,6 @@ const blogs = [
 const Blog = () => {
   return (
     <div className="blog-page">
-      {/* Hero Section (same as Pricing/Gallery) */}
       <div className="contact-hero">
         <div className="contact-hero-overlay"></div>
         <div className="contact-hero-content">
@@ -44,15 +44,13 @@ const Blog = () => {
         </div>
       </div>
 
-      {/* Intro */}
       <p className="blog-subheading">
         Our car rental services, in the travel industry and business industry, stand apart for their quality and great taste.
       </p>
 
-      {/* Blog Cards */}
       <div className="blog-cards">
         {blogs.map(blog => (
-          <div className="blog-card" key={blog.id}>
+          <Link to={`/blog/${blog.id}`} className="blog-card" key={blog.id}>
             <div className="blog-image-wrapper">
               <img src={blog.image} alt={blog.title} className="blog-image" />
               <div className="blog-date">{blog.date}</div>
@@ -65,7 +63,7 @@ const Blog = () => {
                 <span className="blog-comments"><FaRegComments /> {blog.comments}</span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

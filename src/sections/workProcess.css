@@ -225,7 +225,7 @@
     height: 40px;
     background: linear-gradient(180deg, #f79c2e 0%, rgba(247, 156, 46, 0.5) 100%);
     margin: 20px auto;
-    border-radius: 2px;
+    border-radius: 1px;
     position: relative;
   }
 
@@ -248,9 +248,13 @@
   .work-process {
     padding: 40px 10px;
   }
+  .work-steps{
+    gap: 10px;
+  }
 
   .work-step {
-    width: 95%;
+    width: 90%;
+    gap: 15px;
     padding: 25px 15px;
   }
 

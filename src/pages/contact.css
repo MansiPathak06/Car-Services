@@ -18,8 +18,8 @@
 }
 
 .contact-overlay {
- 
-  padding: 60px 20px;
+ background: rgba(0, 0, 0, 0.4); 
+ padding: 60px 20px;
   border-radius: 10px;
 }
 

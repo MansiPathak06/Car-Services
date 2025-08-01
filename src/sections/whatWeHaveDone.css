@@ -201,6 +201,7 @@
 
   .done-item h4 {
     font-size: 16px;
+    justify-content: center;
   }
 
   .done-item p {
