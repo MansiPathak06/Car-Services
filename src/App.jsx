@@ -10,6 +10,7 @@ import Pricing from './pages/Pricing';
 import Products from './pages/Products';
 import Gallery from './pages/Gallery';
 import BookService from './components/BookService';
+import Blog from './pages/Blog';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/products" element={<Products/>} />
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/bookservice" element={<BookService/>} />
+        <Route path="/blog" element={<Blog/>} />
         
       </Routes>
       <Footer />

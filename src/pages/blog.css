@@ -1,0 +1,126 @@
+.blog-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Reusing contact-hero styles */
+.contact-hero {
+  background-image: url('https://i.pinimg.com/736x/f7/45/47/f745479527e4a3d34c58acc18de65d57.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-hero-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-breadcrumb {
+  font-size: 16px;
+  color: #ddd;
+}
+
+/* Blog subheading */
+.blog-subheading {
+  text-align: center;
+  margin: 40px auto 30px;
+  font-size: 16px;
+  color: #555;
+  max-width: 800px;
+}
+
+/* Blog Cards */
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  width: 330px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+
+.blog-image-wrapper {
+  position: relative;
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-date {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #ffb100;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.blog-content {
+  padding: 18px;
+}
+
+.blog-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog-excerpt {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+  align-items: center;
+}
+
+.blog-comments svg {
+  margin-right: 4px;
+  vertical-align: middle;
+}

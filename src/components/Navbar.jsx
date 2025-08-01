@@ -45,7 +45,7 @@ const Navbar = () => {
           <a href="/pricing">PRICING</a>
 
           {/* <div className="dropdown"> */}
-          <a href="#">BLOG </a>
+          <a href="/blog">BLOG </a>
           {/* <div className="dropdown-content">
               <a href="#">Latest Posts</a>
             </div> */}

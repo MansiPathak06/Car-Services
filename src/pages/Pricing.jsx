@@ -4,11 +4,11 @@ import './pricing.css';
 const Pricing = () => {
   return (
     <div className="pricing-page">
-      <div className="contact-hero">
-        <div className="contact-hero-overlay"></div>
-        <div className="contact-hero-content">
+      <div className="pricing-hero">
+        <div className="pricing-hero-overlay"></div>
+        <div className="pricing-hero-content">
           <h2>Pricing</h2>
-          <div className="contact-breadcrumb">Home {'>'} Pricing</div>
+          <div className="pricing-breadcrumb">Home {'>'} Pricing</div>
         </div>
       </div>
 
@@ -37,7 +37,6 @@ const Pricing = () => {
               <li>Break Adjustment</li>
               <li>Cambelt Replacement</li>
             </ul>
-
           </div>
 
           <div className="pricing-card">
@@ -50,7 +49,6 @@ const Pricing = () => {
               <li>Break Adjustments</li>
               <li>Cambelt Replacement</li>
             </ul>
-            
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
+
 import React, { useState } from 'react';
 import './gallery.css';
-import './contact.css'; // Adjust path if needed
 
 const images = [
   {
@@ -52,12 +52,12 @@ const Gallery = () => {
   return (
     <div className="gallery-page">
       
-      {/* Hero Heading (like Contact) */}
-      <div className="contact-hero">
-        <div className="contact-hero-overlay"></div>
-        <div className="contact-hero-content">
+      {/* Hero Heading */}
+      <div className="gallery-hero">
+        <div className="gallery-hero-overlay"></div>
+        <div className="gallery-hero-content">
           <h2>Our Work <span style={{ color: '#f79c2e' }}>Gallery</span></h2>
-          <div className="contact-breadcrumb">Gallery</div>
+          <div className="gallery-breadcrumb">Home {'>'} Gallery</div>
         </div>
       </div>
 
